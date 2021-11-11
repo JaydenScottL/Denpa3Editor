@@ -35,8 +35,6 @@ namespace Denpa3Editor
             haircolor = 0x13A9C,
             antenna_appearances = 0x13A8E,
             level = 0x13AAC,
-            jewels = 0x0000,
-            gold = 0x00,
             ap = 0x13AB0,
             hp = 0x13AAE,
             new_denpa = 0x13A40,
@@ -646,8 +644,6 @@ namespace Denpa3Editor
             }
         }
 
-        
-
         void updateforms()
         {         
 
@@ -685,7 +681,7 @@ namespace Denpa3Editor
             }
             else
             {
-                button3.Enabled = true;
+                NewDenpaButton.Enabled = true;
                 closeforms();
                 return;
             }
@@ -865,6 +861,47 @@ namespace Denpa3Editor
 
         }
 
+        private void MaxGoldAndJewels(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                sf_buffer[(int)Offsets.goldandjewels + i] = 0xFF;
+            }
+
+            MessageBox.Show("Maximum Gold and Jewels were added to the buffer. \nSelect Save to save them to the file.");
+        }
+
+        private void NewDenpaButton_Click(object sender, EventArgs e)
+        {
+            // Create a new denpa with new_denpa values
+
+            writearray(new_denpa, sf_buffer, (int)Offsets.new_denpa + (current_denpa * offset_distance));
+            names[current_denpa] = new byte[15];
+            buildname((int)Offsets.name + (current_denpa * offset_distance), 0, sf_buffer, names[current_denpa], 2, 1, 12);
+            antenna[current_denpa] = sf_buffer[(int)Offsets.antenna + (current_denpa * offset_distance)];
+            headshape[current_denpa] = sf_buffer[(int)Offsets.headshape + (current_denpa * offset_distance)];
+            faceshape[current_denpa] = sf_buffer[(int)Offsets.faceshape + (current_denpa * offset_distance)];
+            hair[current_denpa] = sf_buffer[(int)Offsets.hair + (current_denpa * offset_distance)];
+            eyebrows[current_denpa] = sf_buffer[(int)Offsets.eyebrows + (current_denpa * offset_distance)];
+            eyes[current_denpa] = sf_buffer[(int)Offsets.eyes + (current_denpa * offset_distance)];
+            nose[current_denpa] = sf_buffer[(int)Offsets.nose + (current_denpa * offset_distance)];
+            mouth[current_denpa] = sf_buffer[(int)Offsets.mouth + (current_denpa * offset_distance)];
+            cheeks[current_denpa] = sf_buffer[(int)Offsets.cheeks + (current_denpa * offset_distance)];
+            glasses[current_denpa] = sf_buffer[(int)Offsets.glasses + (current_denpa * offset_distance)];
+            body[current_denpa] = sf_buffer[(int)Offsets.body + (current_denpa * offset_distance)];
+            color[current_denpa] = sf_buffer[(int)Offsets.color + (current_denpa * offset_distance)];
+            skin[current_denpa] = sf_buffer[(int)Offsets.skin + (current_denpa * offset_distance)];
+            haircolor[current_denpa] = sf_buffer[(int)Offsets.haircolor + (current_denpa * offset_distance)];
+            antenna_appearances[current_denpa] = sf_buffer[(int)Offsets.antenna_appearances + (current_denpa * offset_distance)];
+            levels[current_denpa] = sf_buffer[(int)Offsets.level + (current_denpa * offset_distance)];
+            ap[current_denpa] = sf_buffer[(int)Offsets.ap + (current_denpa * offset_distance)];
+            hp[current_denpa] = sf_buffer[(int)Offsets.hp + (current_denpa * offset_distance)];
+            denpas[current_denpa] = true;
+
+            openforms();
+            updateforms();
+        }
+
         private void HeadShapeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             headshape[current_denpa] = (byte)HeadShapeComboBox.SelectedIndex;
@@ -989,51 +1026,9 @@ namespace Denpa3Editor
             hp[current_denpa] = (ushort)APNumberUpDown.Value;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-            // Create a new denpa with new_denpa values
-
-            writearray(new_denpa, sf_buffer, (int)Offsets.new_denpa + (current_denpa * offset_distance));
-            names[current_denpa] = new byte[15];
-            buildname((int)Offsets.name + (current_denpa * offset_distance), 0, sf_buffer, names[current_denpa], 2, 1, 12);
-            antenna[current_denpa] = sf_buffer[(int)Offsets.antenna + (current_denpa * offset_distance)];
-            headshape[current_denpa] = sf_buffer[(int)Offsets.headshape + (current_denpa * offset_distance)];
-            faceshape[current_denpa] = sf_buffer[(int)Offsets.faceshape + (current_denpa * offset_distance)];
-            hair[current_denpa] = sf_buffer[(int)Offsets.hair + (current_denpa * offset_distance)];
-            eyebrows[current_denpa] = sf_buffer[(int)Offsets.eyebrows + (current_denpa * offset_distance)];
-            eyes[current_denpa] = sf_buffer[(int)Offsets.eyes + (current_denpa * offset_distance)];
-            nose[current_denpa] = sf_buffer[(int)Offsets.nose + (current_denpa * offset_distance)];
-            mouth[current_denpa] = sf_buffer[(int)Offsets.mouth + (current_denpa * offset_distance)];
-            cheeks[current_denpa] = sf_buffer[(int)Offsets.cheeks + (current_denpa * offset_distance)];
-            glasses[current_denpa] = sf_buffer[(int)Offsets.glasses + (current_denpa * offset_distance)];
-            body[current_denpa] = sf_buffer[(int)Offsets.body + (current_denpa * offset_distance)];
-            color[current_denpa] = sf_buffer[(int)Offsets.color + (current_denpa * offset_distance)];
-            skin[current_denpa] = sf_buffer[(int)Offsets.skin + (current_denpa * offset_distance)];
-            haircolor[current_denpa] = sf_buffer[(int)Offsets.haircolor + (current_denpa * offset_distance)];
-            antenna_appearances[current_denpa] = sf_buffer[(int)Offsets.antenna_appearances + (current_denpa * offset_distance)];
-            levels[current_denpa] = sf_buffer[(int)Offsets.level + (current_denpa * offset_distance)];
-            ap[current_denpa] = sf_buffer[(int)Offsets.ap + (current_denpa * offset_distance)];
-            hp[current_denpa] = sf_buffer[(int)Offsets.hp + (current_denpa * offset_distance)];
-            denpas[current_denpa] = true;
-
-            openforms();
-            updateforms();
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://discord.gg/RKABRENajK");
-        }
-
-        private void MaxGoldAndJewels(object sender, EventArgs e)
-        {
-            for (int i = 0; i < 7; i++)
-            {
-                sf_buffer[(int)Offsets.goldandjewels + i] = 0xFF;
-            }
-
-            MessageBox.Show("Maximum Gold and Jewels were added to the buffer. \nSelect Save to save them to the file.");
         }
     }
 }
