@@ -62,7 +62,7 @@ namespace Denpa3Editor
         Graphics g;
         Image dat;
         Rectangle cloneRect;
-        Bitmap decals = (Bitmap)Bitmap.FromFile("decals.png");
+        Bitmap decals = (Bitmap)Properties.Resources.decals;
   
         // Antenna Values
 
@@ -662,17 +662,17 @@ namespace Denpa3Editor
 
             if (current_denpa == 0)
             {
-                label18.Text = "Hero";
+                CurrentDenpaLabel.Text = "Hero";
             }
             else
             {
                 if (denpas[current_denpa])
                 {
-                    label18.Text = "Party Member " + current_denpa.ToString();
+                    CurrentDenpaLabel.Text = "Party Member " + current_denpa.ToString();
                 }
                 else
                 {
-                    label18.Text = "Empty Slot (" + current_denpa.ToString() + ")";
+                    CurrentDenpaLabel.Text = "Empty Slot (" + current_denpa.ToString() + ")";
                 }
             }
 
@@ -1021,18 +1021,19 @@ namespace Denpa3Editor
             updateforms();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            for (int i = 0; i < 7; i++) {
+            System.Diagnostics.Process.Start("https://discord.gg/RKABRENajK");
+        }
+
+        private void MaxGoldAndJewels(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 7; i++)
+            {
                 sf_buffer[(int)Offsets.goldandjewels + i] = 0xFF;
             }
 
             MessageBox.Show("Maximum Gold and Jewels were added to the buffer. \nSelect Save to save them to the file.");
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://discord.gg/RKABRENajK");
         }
     }
 }

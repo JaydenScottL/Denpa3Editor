@@ -71,7 +71,7 @@ namespace Denpa3Editor
             this.label17 = new System.Windows.Forms.Label();
             this.LevelNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
+            this.CurrentDenpaLabel = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -1275,17 +1275,17 @@ namespace Denpa3Editor
             this.button1.TabIndex = 44;
             this.button1.Text = "Max Jewels and Gold";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.MaxGoldAndJewels);
             // 
-            // label18
+            // CurrentDenpaLabel
             // 
-            this.label18.Location = new System.Drawing.Point(107, 28);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(119, 17);
-            this.label18.TabIndex = 46;
-            this.label18.Text = "(None)";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CurrentDenpaLabel.Location = new System.Drawing.Point(107, 28);
+            this.CurrentDenpaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CurrentDenpaLabel.Name = "CurrentDenpaLabel";
+            this.CurrentDenpaLabel.Size = new System.Drawing.Size(119, 17);
+            this.CurrentDenpaLabel.TabIndex = 46;
+            this.CurrentDenpaLabel.Text = "(None)";
+            this.CurrentDenpaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button3
             // 
@@ -1375,7 +1375,7 @@ namespace Denpa3Editor
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label18);
+            this.Controls.Add(this.CurrentDenpaLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LevelNumericUpDown);
             this.Controls.Add(this.label17);
@@ -1477,7 +1477,7 @@ namespace Denpa3Editor
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.NumericUpDown LevelNumericUpDown;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label CurrentDenpaLabel;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
