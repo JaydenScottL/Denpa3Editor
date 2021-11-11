@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="decals.png" />
+    <Content Include="Denpa3AntennaAppearances.txt" />
     <None Include="img\decals.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

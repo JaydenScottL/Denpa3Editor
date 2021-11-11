@@ -1,0 +1,260 @@
+(int)	(HEX)	Antenna
+------  ------- -----------------
+0	0	None
+1	1	Antenna Root
+2	2	Treasure x2
+3	3	Treasure x3
+4	4	Treasure x5
+5	5	Rare Treasure x2
+6	6	Rare Treasure x3
+7	7	Rare Treasure x5
+8	8	Gold x2
+9	9	Gold x3
+10	A	Gold x5
+11	B	Stealthy
+12	C	Stealthier
+13	D	Stealhiest
+14	E	Tiny Heal
+15	F	Medium Heal
+16	10	Full Heal
+17	11	Tiny Heal (All)
+18	12	Medium Heal (All)
+19	13	Full Heal (All)
+20	14	Small Revive
+21	15	Revive
+22	16	Full Revive
+23	17	Small Revive (All)
+24	18	Revive  (All)
+25	19	Full Revive (All)
+26	1A	Antidote
+27	1B	Antidote (All)
+28	1C	Cure Burn
+29	1D	Cure Burn (All)
+30	1E	Dry
+31	1F	Dry (All)
+32	20	Cure Sniffles
+33	21	Cure Sniffles (All)
+34	22	Mud Off
+35	23	Mud Off (All)
+36	24	Purify
+37	25	Purify (All)
+38	26	Cure Shock
+39	27	Cure Shock (All)
+40	28	Hot Blanket
+41	29	Hot Blanket (All)
+42	2A	Mobilize
+43	2B	Mobilize (All)
+44	2C	Awaken
+45	2D	Awaken (All)
+46	2E	Eye Drops
+47	2F	Eye Drops (All)
+48	30	Invincible
+49	31	Invincible (All)
+50	32	Excite (All)
+51	33	Steroids
+52	34	Steroids (All)
+53	35	Reflect
+54	36	Reflect (All)
+55	37	Tiny Rage
+56	38	Rage
+57	39	Great Rage
+58	3A	Tiny Rage (All)
+59	3B	Rage (All)
+60	3C	Great Rage (All)
+61	3D	Tiny Wall
+62	3E	Wall
+63	3F	Great Wall
+64	40	Tiny Wall (All)
+65	41	Wall (All)
+66	42	Great Wall (All)
+67	43	Tiny Haste
+68	44	Haste
+69	45	Great Haste
+70	46	Tiny Haste (All)
+71	47	Haste (All)
+72	48	Great Haste (All)
+73	49	Tiny Dodge
+74	4A	Dodge
+75	4B	Great Dodge
+76	4C	Tiny Dodge (All)
+77	4D	Dodge (All)
+78	4E	Great Dodge (All)
+79	4F	Poison Signal
+80	50	Poison Wave
+81	51	Fatal
+82	52	Fatal (All)
+83	53	Lullably
+84	54	Lullably (All)
+85	55	Paralyze
+86	56	Paralyze (All)
+87	57	Blindfold 
+88	58	Blindfold (All)
+89	59	Breath Plug
+90	5A	Breath Plug (All)
+91	5B	Tiny Weaken
+92	5C	Weaken
+93	5D	Great Weaken
+94	5E	Tiny Weaken (All)
+95	5F	Weaken (All)
+96	60	Great Weaken (All)
+97	61	Tiny Insult
+98	62	Insult
+99	63	Great Insult
+100	64	Tiny Insult (All)
+101	65	Insult (All)
+102	66	Great Insult (All)
+103	67	Tiny Chain
+104	68	Chain
+105	69	Great Chain
+106	6A	Tiny Chain (All)
+107	6B	Chain (All)
+108	6C	Great Chain (All)
+109	6D	Fireball
+110	6E	Flame Thrower
+111	6F	Rising Flames
+112	70	Fire Cracker
+113	71	Explosion
+114	72	Big Bang
+115	73	Forest Fire
+116	74	Magma Wave
+117	75	Fire Wall
+118	76	Icicle
+119	77	Ice Blade
+120	78	Ice Missle
+121	79	On The Rocks
+122	7A	Eternal Ice
+123	7B	Diamond Dust
+124	7C	Hailstorm
+125	7D	Snowstorm
+126	7E	Blizzard
+127	7F	Whirlwind
+128	80	Sandstorm
+129	81	Cyclone
+130	82	Breeze
+131	83	Storm
+132	84	Hurricane
+133	85	Twister
+134	86	Jet Current
+135	87	Downburst
+136	88	Failling Rock
+137	89	Landslide
+138	8A	Avalanche
+139	8B	Pebbles
+140	8C	Rock Crush
+141	8D	Comet Crash
+142	8E	Magnitude 3
+143	8F	Magnitude 6
+144	90	Magnitude 12
+145	91	Static
+146	92	Shock
+147	93	Spark
+148	94	Lightning
+149	95	Thunder
+150	96	Bolt from the Blue
+151	97	100 Volts
+152	98	10000 Volts
+153	99	1 Billion Volts
+154	9A	Water Gun
+155	9B	Water Cannon
+156	9C	Mud Stream
+157	9D	Bucket of Water
+158	9E	Waterfall
+159	9F	Jet Splash
+160	A0	High Wave
+161	A1	Tidal Wave
+162	A2	Island Destroyer
+163	A3	Weak Flash
+164	A4	Bright Flash
+165	A5	Laser Beam
+166	A6	Spotlight
+167	A7	Light Burst
+168	A8	Flare
+169	A9	Winter Sunlight
+170	AA	Summer Sun
+171	AB	Supernova
+172	AC	Scare
+173	AD	Surprise
+174	AE	Dark Messenger
+175	AF	Dark Ball
+176	B0	Black Whirl
+177	B1	Black Hole
+178	B2	Dark Mist
+179	B3	Deep Shadow
+180	B4	Abyss
+181	B5	Ferocious Flames
+182	B6	Iceberg
+183	B7	Vengeful Wind
+184	B8	Cave-In
+185	B9	Lightning Ball
+186	BA	Fierce Rapids
+187	BB	Blinding Flash
+188	BC	Servant of Darkness
+189	BD	Scorched Ice
+190	BE	Flame Ice
+191	BF	Burning Wind
+192	C0	Firestorm
+193	C1	Eruption
+194	C2	Meteor
+195	C3	Lightning Scorch
+196	C4	Thundering Fire
+197	C5	Sea of Fire
+198	C6	Hydro Fire
+199	C7	Ice Storm
+200	C8	Jet Blizzard
+201	C9	Frozen Fossil
+202	CA	Ice Meteor
+203	CB	Shocking Snow
+204	CC	Thunder Blizzard
+205	CD	Hail
+206	CE	Ice Squall
+207	CF	Dust Storm
+208	D0	Mud Hurricane 
+209	D1	Lightning Storm
+210	D2	Thunder Hurricane
+211	D3	Horizontal Rain
+212	D4	Hydro Storm
+213	D5	Shock Rock
+214	D6	Thundering Ground
+215	D7	Streaming Stones
+216	D8	Muddy Flood
+217	D9	Thunderstorm
+218	DA	Thunder Squall
+219	DB	Black Sun
+220	DC	Dark Shine
+221	DD	Catch
+222	DE	Catch x2
+223	DF	Catch x3
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
