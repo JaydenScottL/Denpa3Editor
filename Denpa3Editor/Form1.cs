@@ -389,7 +389,7 @@ namespace Denpa3Editor
         ushort[] hp = { 0, 0, 0, 0, 0, 0, 0, 0 };
 
         int current_denpa = 0;
-        int nextdenpaoffset = 0x9C;
+        int offset_distance = 0x9C;
 
         public Form1()
         {
@@ -533,7 +533,7 @@ namespace Denpa3Editor
 
             for (int i = 0; i < 8; i++)
             {
-                int offset = (i * nextdenpaoffset);
+                int offset = (i * offset_distance);
 
                 // If there is no denpa in this location, skip
 
@@ -621,7 +621,7 @@ namespace Denpa3Editor
                     continue;
                 }
 
-                int offset = (i * nextdenpaoffset);
+                int offset = (i * offset_distance);
 
                 buildname(0, (int)Offsets.name + offset,names[i],sf_buffer,1,2,names[i].Length);
                 sf_buffer[(int)Offsets.antenna + offset] = antenna[i];
@@ -994,27 +994,27 @@ namespace Denpa3Editor
 
             // Create a new denpa with new_denpa values
 
-            writearray(new_denpa, sf_buffer, (int)Offsets.new_denpa + (current_denpa * nextdenpaoffset));
+            writearray(new_denpa, sf_buffer, (int)Offsets.new_denpa + (current_denpa * offset_distance));
             names[current_denpa] = new byte[15];
-            buildname((int)Offsets.name + (current_denpa * nextdenpaoffset), 0, sf_buffer, names[current_denpa], 2, 1, 12);
-            antenna[current_denpa] = sf_buffer[(int)Offsets.antenna + (current_denpa * nextdenpaoffset)];
-            headshape[current_denpa] = sf_buffer[(int)Offsets.headshape + (current_denpa * nextdenpaoffset)];
-            faceshape[current_denpa] = sf_buffer[(int)Offsets.faceshape + (current_denpa * nextdenpaoffset)];
-            hair[current_denpa] = sf_buffer[(int)Offsets.hair + (current_denpa * nextdenpaoffset)];
-            eyebrows[current_denpa] = sf_buffer[(int)Offsets.eyebrows + (current_denpa * nextdenpaoffset)];
-            eyes[current_denpa] = sf_buffer[(int)Offsets.eyes + (current_denpa * nextdenpaoffset)];
-            nose[current_denpa] = sf_buffer[(int)Offsets.nose + (current_denpa * nextdenpaoffset)];
-            mouth[current_denpa] = sf_buffer[(int)Offsets.mouth + (current_denpa * nextdenpaoffset)];
-            cheeks[current_denpa] = sf_buffer[(int)Offsets.cheeks + (current_denpa * nextdenpaoffset)];
-            glasses[current_denpa] = sf_buffer[(int)Offsets.glasses + (current_denpa * nextdenpaoffset)];
-            body[current_denpa] = sf_buffer[(int)Offsets.body + (current_denpa * nextdenpaoffset)];
-            color[current_denpa] = sf_buffer[(int)Offsets.color + (current_denpa * nextdenpaoffset)];
-            skin[current_denpa] = sf_buffer[(int)Offsets.skin + (current_denpa * nextdenpaoffset)];
-            haircolor[current_denpa] = sf_buffer[(int)Offsets.haircolor + (current_denpa * nextdenpaoffset)];
-            antenna_appearances[current_denpa] = sf_buffer[(int)Offsets.antenna_appearances + (current_denpa * nextdenpaoffset)];
-            levels[current_denpa] = sf_buffer[(int)Offsets.level + (current_denpa * nextdenpaoffset)];
-            ap[current_denpa] = sf_buffer[(int)Offsets.ap + (current_denpa * nextdenpaoffset)];
-            hp[current_denpa] = sf_buffer[(int)Offsets.hp + (current_denpa * nextdenpaoffset)];
+            buildname((int)Offsets.name + (current_denpa * offset_distance), 0, sf_buffer, names[current_denpa], 2, 1, 12);
+            antenna[current_denpa] = sf_buffer[(int)Offsets.antenna + (current_denpa * offset_distance)];
+            headshape[current_denpa] = sf_buffer[(int)Offsets.headshape + (current_denpa * offset_distance)];
+            faceshape[current_denpa] = sf_buffer[(int)Offsets.faceshape + (current_denpa * offset_distance)];
+            hair[current_denpa] = sf_buffer[(int)Offsets.hair + (current_denpa * offset_distance)];
+            eyebrows[current_denpa] = sf_buffer[(int)Offsets.eyebrows + (current_denpa * offset_distance)];
+            eyes[current_denpa] = sf_buffer[(int)Offsets.eyes + (current_denpa * offset_distance)];
+            nose[current_denpa] = sf_buffer[(int)Offsets.nose + (current_denpa * offset_distance)];
+            mouth[current_denpa] = sf_buffer[(int)Offsets.mouth + (current_denpa * offset_distance)];
+            cheeks[current_denpa] = sf_buffer[(int)Offsets.cheeks + (current_denpa * offset_distance)];
+            glasses[current_denpa] = sf_buffer[(int)Offsets.glasses + (current_denpa * offset_distance)];
+            body[current_denpa] = sf_buffer[(int)Offsets.body + (current_denpa * offset_distance)];
+            color[current_denpa] = sf_buffer[(int)Offsets.color + (current_denpa * offset_distance)];
+            skin[current_denpa] = sf_buffer[(int)Offsets.skin + (current_denpa * offset_distance)];
+            haircolor[current_denpa] = sf_buffer[(int)Offsets.haircolor + (current_denpa * offset_distance)];
+            antenna_appearances[current_denpa] = sf_buffer[(int)Offsets.antenna_appearances + (current_denpa * offset_distance)];
+            levels[current_denpa] = sf_buffer[(int)Offsets.level + (current_denpa * offset_distance)];
+            ap[current_denpa] = sf_buffer[(int)Offsets.ap + (current_denpa * offset_distance)];
+            hp[current_denpa] = sf_buffer[(int)Offsets.hp + (current_denpa * offset_distance)];
             denpas[current_denpa] = true;
 
             openforms();
