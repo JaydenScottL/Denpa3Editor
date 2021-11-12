@@ -1256,7 +1256,7 @@ namespace Denpa3Editor
             this.LevelNumericUpDown.Location = new System.Drawing.Point(255, 78);
             this.LevelNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.LevelNumericUpDown.Maximum = new decimal(new int[] {
-            999,
+            199,
             0,
             0,
             0});
