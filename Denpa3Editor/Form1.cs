@@ -687,24 +687,32 @@ namespace Denpa3Editor
             }
 
             loading = true;
-            DenpaName.Text = System.Text.Encoding.ASCII.GetString(names[current_denpa]);
-            HeadShapeComboBox.SelectedIndex = headshape[current_denpa];
-            FaceShapeComboBox.SelectedIndex = faceshape[current_denpa];
-            HairComboBox.SelectedIndex = hair[current_denpa];
-            EyebrowsComboBox.SelectedIndex = eyebrows[current_denpa];
-            EyesComboBox.SelectedIndex = eyes[current_denpa];
-            NoseComboBox.SelectedIndex = nose[current_denpa];
-            MouthComboBox.SelectedIndex = mouth[current_denpa];
-            CheeksComboBox.SelectedIndex = cheeks[current_denpa];
-            BodyComboBox.SelectedIndex = body[current_denpa];
-            GlassesComboBox.SelectedIndex = glasses[current_denpa];
-            SkinComboBox.SelectedIndex = skin[current_denpa];
-            HairColorComboBox.SelectedIndex = haircolor[current_denpa];
-            ColorComboBox.SelectedIndex = color[current_denpa];
-            AntennaAppearanceComboBox.SelectedIndex = antenna_appearances[current_denpa];
-            LevelNumericUpDown.Value = levels[current_denpa];
-            APNumberUpDown.Value = ap[current_denpa];
-            HPNumericUpDown.Value = hp[current_denpa];
+
+            try
+            {
+                DenpaName.Text = System.Text.Encoding.ASCII.GetString(names[current_denpa]);
+                HeadShapeComboBox.SelectedIndex = headshape[current_denpa];
+                FaceShapeComboBox.SelectedIndex = faceshape[current_denpa];
+                HairComboBox.SelectedIndex = hair[current_denpa];
+                EyebrowsComboBox.SelectedIndex = eyebrows[current_denpa];
+                EyesComboBox.SelectedIndex = eyes[current_denpa];
+                NoseComboBox.SelectedIndex = nose[current_denpa];
+                MouthComboBox.SelectedIndex = mouth[current_denpa];
+                CheeksComboBox.SelectedIndex = cheeks[current_denpa];
+                BodyComboBox.SelectedIndex = body[current_denpa];
+                GlassesComboBox.SelectedIndex = glasses[current_denpa];
+                SkinComboBox.SelectedIndex = skin[current_denpa];
+                HairColorComboBox.SelectedIndex = haircolor[current_denpa];
+                ColorComboBox.SelectedIndex = color[current_denpa];
+                AntennaAppearanceComboBox.SelectedIndex = antenna_appearances[current_denpa];
+                LevelNumericUpDown.Value = levels[current_denpa];
+                APNumberUpDown.Value = ap[current_denpa];
+                HPNumericUpDown.Value = hp[current_denpa];
+            }
+            catch (System.ArgumentOutOfRangeException)
+            {
+                // Out of bounds
+            }
 
             loading = false;
 

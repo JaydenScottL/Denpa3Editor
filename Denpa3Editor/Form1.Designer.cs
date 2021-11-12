@@ -816,7 +816,10 @@ namespace Denpa3Editor
             "24",
             "25",
             "26",
-            "27"});
+            "27",
+            "28",
+            "29",
+            "30"});
             this.BodyComboBox.Location = new System.Drawing.Point(440, 326);
             this.BodyComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BodyComboBox.Name = "BodyComboBox";
